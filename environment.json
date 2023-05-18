@@ -1,0 +1,4 @@
+{
+    "SECRET_ARN": "arn:aws:secretsmanager:ap-south-1:532628978276:secret:giroux-secrets-31n67j",
+    "AWS_SOUTH_REGION": "ap-south-1"
+}

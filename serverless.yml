@@ -1,0 +1,41 @@
+service: giroux-backend
+
+custom:
+  secrets: ${file(environment.json)}
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: ap-south-1
+  stackName: giroux-backend-stack
+  environment:
+      SECRET_ARN: ${self:custom.secrets.SECRET_ARN}
+      AWS_SOUTH_REGION: ${self:custom.secrets.AWS_SOUTH_REGION}
+  apiGateway:
+    binaryMediaTypes:
+      - '*/*'
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 'secretsmanager:*'
+            - 's3:*'
+          Resource:
+            - '*'
+functions:
+  server:
+    handler: server.handler
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
+          
+plugins:
+  - serverless-offline

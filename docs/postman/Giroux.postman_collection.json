@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "612575bf-9541-412f-8928-4707285f27fc",
+		"name": "Giroux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21156337"
+	},
+	"item": [
+		{
+			"name": "License Plate",
+			"item": [
+				{
+					"name": "Check Out",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNvX01ROV9qd1BYcFdsWlFweGRVQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1neGRpYWhsMi51cy5hdXRoMC5jb20vIiwic3ViIjoiZjNWMEFBMlduOTE3WTJodVpzM3hvOTZWZWFUNVoxdVFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZ2lyb3V4L2FwaSIsImlhdCI6MTY1NDQ5OTcyOCwiZXhwIjoxNjU0NTg2MTI4LCJhenAiOiJmM1YwQUEyV245MTdZMmh1WnMzeG85NlZlYVQ1WjF1USIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Des57pDC6s0Jh3AFxm4LcBVvQuF4-v1E5XVGENrYELSYEzAyN-6lNpJcB3uaMLI-FdUKhXkohjL_hgaRbF74IaIJ4Lq6T2bT3kR3XIcShuwL8njlFZOful144O7t6cI77X8SgyLH4hTJNyOvd0GpTDo-1EXgxTBKUkAtCjVUqr6d_2-X4NNRJMs-vAhu4b6ywlc_wBdl3qVJBxbyDsCIcutmO6nNmPeeE8EKjfh9CcI1Xid-Wmz1ichQPDkNE0llEk8kAJW6qANZu1B4Zn3v1mKM3I6cnFYaFyNR8QhtDF_fIL_QyTOTpssX7QeYKhtRPumwrwM2d-zSTO97M4tz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cameraid\": \"sdfs89769\",\n    \"time_out\": \"12 PM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/ml/check_out/KA05NB1786",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"ml",
+								"check_out",
+								"KA05NB1786"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check In",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNvX01ROV9qd1BYcFdsWlFweGRVQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1neGRpYWhsMi51cy5hdXRoMC5jb20vIiwic3ViIjoiZjNWMEFBMlduOTE3WTJodVpzM3hvOTZWZWFUNVoxdVFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZ2lyb3V4L2FwaSIsImlhdCI6MTY1NDQ5OTcyOCwiZXhwIjoxNjU0NTg2MTI4LCJhenAiOiJmM1YwQUEyV245MTdZMmh1WnMzeG85NlZlYVQ1WjF1USIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Des57pDC6s0Jh3AFxm4LcBVvQuF4-v1E5XVGENrYELSYEzAyN-6lNpJcB3uaMLI-FdUKhXkohjL_hgaRbF74IaIJ4Lq6T2bT3kR3XIcShuwL8njlFZOful144O7t6cI77X8SgyLH4hTJNyOvd0GpTDo-1EXgxTBKUkAtCjVUqr6d_2-X4NNRJMs-vAhu4b6ywlc_wBdl3qVJBxbyDsCIcutmO6nNmPeeE8EKjfh9CcI1Xid-Wmz1ichQPDkNE0llEk8kAJW6qANZu1B4Zn3v1mKM3I6cnFYaFyNR8QhtDF_fIL_QyTOTpssX7QeYKhtRPumwrwM2d-zSTO97M4tz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cameraid",
+									"value": "sdfs89769",
+									"type": "text"
+								},
+								{
+									"key": "plate",
+									"value": "TN07AT8107",
+									"type": "text"
+								},
+								{
+									"key": "time_in",
+									"value": "11 AM",
+									"type": "text"
+								},
+								{
+									"key": "plateImage",
+									"type": "file",
+									"src": "/home/padam/Downloads/wp4330827-mahakali-anth-hi-aarambh-hai-wallpapers.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/ml/check_in",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"ml",
+								"check_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get License Plates Histories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/licenseplates/history",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"licenseplates",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Register License Plates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/licenseplates/register",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"licenseplates",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register License Plate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plate\":\"TN07AT8107\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/licenseplates/register",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"licenseplates",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Face Recognition",
+			"item": [
+				{
+					"name": "Check Out",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNvX01ROV9qd1BYcFdsWlFweGRVQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1neGRpYWhsMi51cy5hdXRoMC5jb20vIiwic3ViIjoiZjNWMEFBMlduOTE3WTJodVpzM3hvOTZWZWFUNVoxdVFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZ2lyb3V4L2FwaSIsImlhdCI6MTY1NDQ5OTcyOCwiZXhwIjoxNjU0NTg2MTI4LCJhenAiOiJmM1YwQUEyV245MTdZMmh1WnMzeG85NlZlYVQ1WjF1USIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Des57pDC6s0Jh3AFxm4LcBVvQuF4-v1E5XVGENrYELSYEzAyN-6lNpJcB3uaMLI-FdUKhXkohjL_hgaRbF74IaIJ4Lq6T2bT3kR3XIcShuwL8njlFZOful144O7t6cI77X8SgyLH4hTJNyOvd0GpTDo-1EXgxTBKUkAtCjVUqr6d_2-X4NNRJMs-vAhu4b6ywlc_wBdl3qVJBxbyDsCIcutmO6nNmPeeE8EKjfh9CcI1Xid-Wmz1ichQPDkNE0llEk8kAJW6qANZu1B4Zn3v1mKM3I6cnFYaFyNR8QhtDF_fIL_QyTOTpssX7QeYKhtRPumwrwM2d-zSTO97M4tz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cameraid\": \"sdfs89769\",\n    \"time_out\": \"12 PM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/person/check_out/shailja7",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"check_out",
+								"shailja7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check In",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNvX01ROV9qd1BYcFdsWlFweGRVQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1neGRpYWhsMi51cy5hdXRoMC5jb20vIiwic3ViIjoiZjNWMEFBMlduOTE3WTJodVpzM3hvOTZWZWFUNVoxdVFAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZ2lyb3V4L2FwaSIsImlhdCI6MTY1NDQ5OTcyOCwiZXhwIjoxNjU0NTg2MTI4LCJhenAiOiJmM1YwQUEyV245MTdZMmh1WnMzeG85NlZlYVQ1WjF1USIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Des57pDC6s0Jh3AFxm4LcBVvQuF4-v1E5XVGENrYELSYEzAyN-6lNpJcB3uaMLI-FdUKhXkohjL_hgaRbF74IaIJ4Lq6T2bT3kR3XIcShuwL8njlFZOful144O7t6cI77X8SgyLH4hTJNyOvd0GpTDo-1EXgxTBKUkAtCjVUqr6d_2-X4NNRJMs-vAhu4b6ywlc_wBdl3qVJBxbyDsCIcutmO6nNmPeeE8EKjfh9CcI1Xid-Wmz1ichQPDkNE0llEk8kAJW6qANZu1B4Zn3v1mKM3I6cnFYaFyNR8QhtDF_fIL_QyTOTpssX7QeYKhtRPumwrwM2d-zSTO97M4tz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cameraid",
+									"value": "sdfs89769",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "shailja7",
+									"type": "text"
+								},
+								{
+									"key": "time_in",
+									"value": "11 AM",
+									"type": "text"
+								},
+								{
+									"key": "personImg",
+									"type": "file",
+									"src": "/home/padam/Pictures/Serverless_AWS.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/person/check_in",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"check_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Person Histories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/person/history",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ronit",
+									"type": "text"
+								},
+								{
+									"key": "personImg",
+									"type": "file",
+									"src": "/home/padam/Pictures/Vehicle_List.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/person/register",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Register Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/person/register",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
