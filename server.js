@@ -3,6 +3,7 @@ const express = require("express");
 require('dotenv').config();
 const morgan = require("morgan");
 const app = express()
+const PORT = process.env.PORT || 1234
 
 //log requests
 app.use(morgan('tiny'));
@@ -19,4 +20,4 @@ app.use('/api', require('./server/routes/router'))
 // module.exports.handler = serverless(app);
 console.log(`${__dirname}/uploads`)
 console.log('Server is listening on port 1234');
-app.listen(1234)
+app.listen(PORT)

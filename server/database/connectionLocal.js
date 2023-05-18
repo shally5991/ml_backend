@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const logger = require("../helper/logger");
+const DB = process.env.DATABASE
 
 
 const connectDB = async () => {
     try {
-        const con = await mongoose.connect('mongodb+srv://shailja1213:shacha$30@cluster0.pfkqks0.mongodb.net/',{
+        const con = await mongoose.connect(DB,{
             useNewUrlParser: true,
             useUnifiedTopology: true            
         });
